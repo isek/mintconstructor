@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-30 11:26+0200\n"
+"POT-Creation-Date: 2009-07-30 11:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,313 +16,321 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:114
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:85
+msgid "Live CD Remastering Tool"
+msgstr ""
+
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:86
+msgid "Make changes to an ISO or a liveCD"
+msgstr ""
+
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:118
 msgid "INFO: Creating mount directory..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:134
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:138
 msgid "Linux Mint 7 Gloria XXX"
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:207
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:211
 msgid "  <b>Please fix the errors below before continuing.</b>   "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:208
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:212
 msgid ""
 "  There is no remaster directory.  Please select create remaster option.  "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:209
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:213
 msgid "  There is no root directory.  Please select create root option.  "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:210
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:214
 msgid "  There is no initrd directory.  Please select create initrd option.  "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:262
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:266
 msgid "  <b>Continue?</b>  "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:263
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:333
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:267
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:337
 msgid "     This may take a few minutes.  Please wait...     "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:302
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:306
 msgid "  <b>You must enter a working directory.</b>  "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:332
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:336
 msgid "  <b>Build Live CD?</b>  "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:356
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:360
 msgid "Exiting..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:382
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:386
 msgid "Copying DNS info..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:385
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:389
 msgid "Mounting /proc filesystem..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:391
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:395
 msgid "Copying wgetrc configuration..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:407
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:411
 msgid "Launching Xterm for advanced customization..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:411
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:415
 msgid "Error: no valid terminal found"
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:416
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:433
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:420
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:437
 msgid "Restoring wgetrc configuration..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:422
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:439
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:426
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:443
 msgid "Removing DNS info..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:425
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:442
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:429
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:446
 msgid "Umounting /proc..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:447
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:451
 msgid "Error launching terminal: "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:457
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:461
 msgid "Burning ISO..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:460
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:464
 msgid "Error: nautilus-cd-burner is needed for burning iso files... "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:463
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:467
 msgid "Error burning ISO: "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:476
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:480
 msgid "Calculating Live ISO Size..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:503
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:507
 msgid "Error calculating estimated iso size: "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:508
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:512
 msgid "Beginning Interactive Editing..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:523
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:527
 msgid "Starting Xnest in the background..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:526
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:530
 msgid "Error starting Xnest: "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:531
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:535
 msgid "Starting Gnome-Session...."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:536
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:540
 msgid "Error starting Gnome-Session: "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:542
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:546
 msgid "Clearing Interactive Settings..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:543
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:547
 msgid "Removing 'reconstructor' user..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:545
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:549
 msgid "Removing 'reconstructor' home directory..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:550
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:554
 msgid "Error clearing interactive settings: "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:576
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:580
 msgid "Select Working Directory"
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:593
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:597
 msgid "Select Live CD ISO"
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:610
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:614
 msgid "Select Live CD Filename"
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:644
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:648
 msgid "  <b>Delete?</b>  "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:667
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:671
 msgid "INFO: Saving working directory information..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:684
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:688
 msgid "INFO: Setting up working directory..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:702
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:753
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:813
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:706
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:757
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:817
 msgid "  <b>Please insert the Live CD and click OK</b>  "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:710
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:714
 msgid "Using Live CD for remastering..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:718
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:722
 msgid "Using ISO for remastering..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:721
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:725
 msgid "Copying files..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:725
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:729
 msgid "Finished copying files..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:736
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:740
 msgid "INFO: Creating Custom Root directory..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:740
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:744
 msgid "INFO: Removing existing tmpsquash directory..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:760
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:764
 msgid "Using Live CD for squashfs root..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:768
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:772
 msgid "Using ISO for squashfs root..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:774
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:778
 msgid "Mounting squashfs..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:776
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:780
 msgid "Extracting squashfs root..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:782
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:786
 msgid "Unmounting tmpsquash..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:785
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:789
 msgid "Unmounting cdrom..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:788
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:792
 msgid "Removing tmpsquash..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:791
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:795
 msgid "Setting proper permissions..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:794
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:798
 msgid "Finished extracting squashfs root..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:801
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:805
 msgid "INFO: Removing existing Initrd directory..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:803
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:807
 msgid "INFO: Creating Initrd directory..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:820
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:824
 msgid "Using Live CD for initrd..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:828
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:832
 msgid "Using ISO for initrd..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:832
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:836
 msgid "Extracting Initial Ram Disk (initrd)..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:842
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:846
 msgid "Finished setting up working directory..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:863
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:867
 msgid "INFO: Starting Build..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:869
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:873
 msgid "Creating Initrd..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:876
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:880
 msgid "Creating SquashFS root..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:877
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:881
 msgid "Updating File lists..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:883
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:887
 msgid "Removing existing SquashFS root..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:885
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:889
 msgid "Building SquashFS root..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:896
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:900
 msgid "Creating ISO..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:902
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:906
 msgid "Updating md5 sums..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:913
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:917
 msgid "Removing existing ISO..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:922
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:926
 msgid "Building x86 ISO..."
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:934
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:938
 msgid "     <b>Finished.</b>     "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:935
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:939
 msgid "      <b>Finished.</b> ISO located at: "
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:972
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:976
 msgid "  <b>You must run with root privileges.</b>"
 msgstr ""
 
-#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:973
+#: usr/lib/linuxmint/mintConstructor/mintConstructor.py:977
 msgid "Insufficient permissions"
 msgstr ""

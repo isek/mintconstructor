@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=mintConstructor
-Comment=Reconstructor for Linux Mint
+Name=Live CD Remastering Tool
+Comment=Make changes to an ISO or a liveCD
 Exec=mintconstructor
-Icon=/usr/lib/linuxmint/mintSystem/icon.png
+Icon=/usr/lib/linuxmint/mintConstructor/icon.svg
 Terminal=false
 Type=Application
 Encoding=UTF-8

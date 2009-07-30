@@ -30,9 +30,9 @@ class Reconstructor:
     def __init__(self):
         # vars
         self.gladefile = '/usr/lib/linuxmint/mintConstructor/mintConstructor.glade'
-        self.iconFile = '/usr/lib/linuxmint/mintSystem/icon.png'
+        self.iconFile = '/usr/lib/linuxmint/mintConstructor/icon.svg'
 
-        self.appName = "mintConstructor"
+        self.appName = "Live CD Remastering Tool"
         self.codeName = " \"Chartres\" "
         self.devInProgress = False
         self.updateId = "321"
@@ -80,6 +80,10 @@ class Reconstructor:
         gtk.glade.textdomain(APPDOMAIN)
         gettext.textdomain(APPDOMAIN)
         gettext.install(APPDOMAIN, LANGDIR, unicode=1)
+
+	# i18n for menu item
+	menuName = _("Live CD Remastering Tool")
+	menuComment = _("Make changes to an ISO or a liveCD")
 
         # setup glade widget tree
         self.wTree = gtk.glade.XML(self.gladefile, domain='reconstructor')
@@ -964,7 +968,7 @@ if __name__ == "__main__":
     if os.getuid() != 0 :
         ## show non-root privledge error
         warnDlg = gtk.Dialog(title="mintConstructor", parent=None, flags=0, buttons=(gtk.STOCK_OK, gtk.RESPONSE_OK))
-        warnDlg.set_icon_from_file('/usr/lib/linuxmint/mintSystem/icon.png')
+        warnDlg.set_icon_from_file('/usr/lib/linuxmint/mintConstructor/icon.svg')
         warnDlg.vbox.set_spacing(10)
         labelSpc = gtk.Label(" ")
         warnDlg.vbox.pack_start(labelSpc)
