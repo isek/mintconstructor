@@ -1,0 +1,89 @@
+mintconstructor (2.2.1) helena; urgency=low
+
+  * Blueprint: Generic names 
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  30 Jul 2009 11:28:00 +0000
+
+mintconstructor (2.2) gloria; urgency=low
+
+  * Added language tools mint-translation-export for easier upload into launchpad
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  18 Jun 2009 13:17:00 +0000
+
+mintconstructor (2.1) gloria; urgency=low
+
+  * Added language tools mint-translation-include and mint-translation-validate
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  18 Jun 2009 12:03:00 +0000
+
+mintconstructor (2.0) gloria; urgency=low
+
+  * Forces the removal of boot.cat in md5sum.txt...
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri,  5 Jun 2009 11:33:00 +0000
+
+mintconstructor (1.9) gloria; urgency=low
+
+  * Forces the removal of md5sum.txt in md5sum.txt... #cough#
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun,  26 Apr 2009 21:16:00 +0000
+
+mintconstructor (1.8) gloria; urgency=low
+
+  * Now updates the manifest file before the md5sums :))
+  * Changed default labels for output ISO name and description
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun,  26 Apr 2009 16:40:00 +0000
+
+mintconstructor (1.7) gloria; urgency=low
+
+  * Uses the project path by default for the destination of the ISO
+  * Plays a sound if /usr/bin/aplay is present after extraction/creation of ISOs
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri,  24 Apr 2009 17:07:00 +0000
+
+mintconstructor (1.6) gloria; urgency=low
+
+  * Now uses mint-which-launcher
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed,  22 Apr 2009 17:29:00 +0000
+
+mintconstructor (1.5) gloria; urgency=low
+
+  * Uses xterm instead of gnome-terminal (due to regression in Jaunty)
+  * New /usr/bin/mintconstructor
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue,  21 Apr 2009 17:07:00 +0000
+
+mintconstructor (1.4) felicia; urgency=low
+
+  * Fixed md5sum.txt file generation
+  * Removed architecture combo (PPC wasn't used, amd64 was using the same way of generating ISOFS than i386)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat,  31 Jan 2009 14:58:00 +0000
+
+mintconstructor (1.3) felicia; urgency=low
+
+  * Added dependency on xterm
+  * Removed use of konsole
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  8 Jan 2009 17:47:00 +0000
+
+mintconstructor (1.2) felicia; urgency=low
+
+  * Patches by Boo to use konsole under KDE for chroot env and to fix some errors left over from the fork. 
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon,  5 Jan 2009 16:47:00 +0000
+
+mintconstructor (1.1) felicia; urgency=low
+
+  * Fixed some dependency problems
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun,  4 Jan 2009 10:31:00 +0000
+
+mintconstructor (1.0) felicia; urgency=low
+
+  * Initial release - Forked from Reconstructor 2.7
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat,  3 Jan 2009 16:44:00 +0000
+

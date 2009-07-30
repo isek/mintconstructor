@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=mintConstructor
+Comment=Reconstructor for Linux Mint
+Exec=mintconstructor
+Icon=/usr/lib/linuxmint/mintSystem/icon.png
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Application;System;Settings;
+StartupNotify=false

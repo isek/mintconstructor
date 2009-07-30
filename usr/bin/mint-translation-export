@@ -1,0 +1,22 @@
+#!/usr/bin/python
+
+import os, sys, string
+
+if len(sys.argv) < 2:
+	print "Usage: mint-translation-export minttool"
+	sys.exit(1)
+
+tool = sys.argv[1]
+os.system("rm -rf locale")
+os.system("cp -R /usr/lib/linuxmint/" + tool + "/locale ./")
+
+tool = string.lower(tool)
+os.system("rm -rf " + tool)
+os.system("mv locale " + tool)
+os.chdir(tool)
+for filename in os.listdir("."):
+	print "exporting " + filename
+	newname = filename + ".po"
+	os.system("mv " + filename + "/LC_MESSAGES/messages.po ./" + newname)
+	os.system("rm -rf " + filename)
+

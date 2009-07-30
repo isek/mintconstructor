@@ -1,0 +1,12 @@
+Source: mintconstructor
+Section: admin
+Priority: optional
+Maintainer: clem <root@linuxmint.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: mintconstructor
+Architecture: all
+Depends: python (>= 2.4), python (<< 3), python-gtk2, python-glade2, mintsystem, squashfs-tools, coreutils, genisoimage, rsync, xterm
+Description: Reconstructor for Linux Mint
+ Used by the dev team to automate all the tedious repetitive work (mksquashfs, mkisofs, chroot, etc..) while making a Mint ISO. 

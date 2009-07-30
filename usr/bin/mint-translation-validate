@@ -1,0 +1,25 @@
+#!/usr/bin/python
+
+import os
+import sys
+
+if len(sys.argv) < 2:
+	print "Usage: mint-translation-validate minttool"
+	sys.exit(1)
+
+tool = sys.argv[1]
+
+print " ### LOCAL DIFF ### "
+for filename in os.listdir("."):
+	basename, extension = filename.split('.')
+	if extension == "po":
+		os.system("msgfmt --check-format " + filename)
+		os.system("msgcmp " + filename + " /usr/lib/linuxmint/" + tool + "/locale/fr/LC_MESSAGES/messages.po")
+		os.system("diff " + filename + " /usr/lib/linuxmint/" + tool + "/locale/fr/LC_MESSAGES/messages.po | grep msgid")
+
+print " ### SYSTEM DIFF ### "
+for dirname in os.listdir("/usr/lib/linuxmint/" + tool + "/locale"):
+	filename = "/usr/lib/linuxmint/" + tool + "/locale/" + dirname + "/LC_MESSAGES/messages.po"
+	os.system("msgcmp " + filename + " /usr/lib/linuxmint/" + tool + "/locale/fr/LC_MESSAGES/messages.po")
+	os.system("diff " + filename + " /usr/lib/linuxmint/" + tool + "/locale/fr/LC_MESSAGES/messages.po | grep msgid")
+

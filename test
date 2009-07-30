@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo rm -rf /usr/lib/linuxmint/mintConstructor
+sudo cp -R usr /
+mintconstructor

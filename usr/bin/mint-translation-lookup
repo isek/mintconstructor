@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+import os, sys, string
+
+if len(sys.argv) < 2:
+	print "Usage: mint-translation-lookup language"
+	sys.exit(1)
+
+language = sys.argv[1]
+
+print "language: " + language
+
+os.system("aptitude search language-pack-" + language)
+
