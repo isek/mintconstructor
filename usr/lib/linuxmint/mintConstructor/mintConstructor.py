@@ -486,8 +486,8 @@ class Reconstructor:
             remasterSize = int(mRemaster.group(1))
 
             # subtract squashfs root
-            if os.path.exists(os.path.join(self.customDir, "remaster/casper/filesystem.squashfs")):
-                squash = commands.getoutput('du -s ' + os.path.join(self.customDir, "remaster/casper/filesystem.squashfs"))
+            if os.path.exists(os.path.join(self.customDir, "remaster/live/filesystem.squashfs")):
+                squash = commands.getoutput('du -s ' + os.path.join(self.customDir, "remaster/live/filesystem.squashfs"))
                 mSquash = r.match(squash)
                 squashSize = int(mSquash.group(1))
 	    print "OK"
@@ -776,7 +776,7 @@ class Reconstructor:
             os.mkdir(os.path.join(self.customDir, "tmpsquash"))
             # mount squashfs root
             print _("Mounting squashfs...")
-            os.popen('mount -t squashfs -o loop ' + self.mountDir + '/casper/filesystem.squashfs \"' + os.path.join(self.customDir, "tmpsquash") + '\"')
+            os.popen('mount -t squashfs -o loop ' + self.mountDir + '/live/filesystem.squashfs \"' + os.path.join(self.customDir, "tmpsquash") + '\"')
             print _("Extracting squashfs root...")
 
             # copy squashfs root
@@ -793,8 +793,8 @@ class Reconstructor:
             os.popen('rm -Rf \"' + os.path.join(self.customDir, "tmpsquash") + '\"')
             # set proper permissions - MUST DO WITH UBUNTU
             print _("Setting proper permissions...")
-            os.popen('chmod 6755 \"' + os.path.join(self.customDir, "root/usr/bin/sudo") + '\"')
-            os.popen('chmod 0440 \"' + os.path.join(self.customDir, "root/etc/sudoers") + '\"')
+            #os.popen('chmod 6755 \"' + os.path.join(self.customDir, "root/usr/bin/sudo") + '\"')
+            #os.popen('chmod 0440 \"' + os.path.join(self.customDir, "root/etc/sudoers") + '\"')
             print _("Finished extracting squashfs root...")
 	    if os.path.exists("/usr/bin/aplay"):
 	        os.system("/usr/bin/aplay /usr/lib/linuxmint/mintConstructor/done.wav")
@@ -834,7 +834,7 @@ class Reconstructor:
 
             # extract initrd
             print _("Extracting Initial Ram Disk (initrd)...")
-            os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; cat ' + self.mountDir + '/casper/initrd.gz | gzip -d | cpio -i')
+            os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; cat ' + self.mountDir + '/live/initrd1.img | gzip -d | cpio -i')
 
             # umount cdrom
             os.popen("umount " + self.mountDir)
@@ -871,7 +871,7 @@ class Reconstructor:
             # create initrd
             if os.path.exists(os.path.join(self.customDir, "initrd")):
                 print _("Creating Initrd...")
-                os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; find | cpio -H newc -o | gzip > ../initrd.gz' + '; mv -f ../initrd.gz \"' + os.path.join(self.customDir, "remaster/casper/initrd.gz") + '\"')
+                os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; find | cpio -H newc -o | gzip > ../initrd1.img' + '; mv -f ../initrd1.img \"' + os.path.join(self.customDir, "remaster/live/initrd1.img") + '\"')
 
         # build squash root
         if self.buildSquashRoot == True:
@@ -880,18 +880,18 @@ class Reconstructor:
                 print _("Creating SquashFS root...")
                 print _("Updating File lists...")
                 q = ' dpkg-query -W --showformat=\'${Package} ${Version}\n\' '
-                os.popen('chroot \"' + os.path.join(self.customDir, "root/") + '\"' + q + ' > \"' + os.path.join(self.customDir, "remaster/casper/filesystem.manifest") + '\"' )
-                os.popen('cp -f \"' + os.path.join(self.customDir, "remaster/casper/filesystem.manifest") + '\" \"' + os.path.join(self.customDir, "remaster/casper/filesystem.manifest-desktop") + '\"')
+                os.popen('chroot \"' + os.path.join(self.customDir, "root/") + '\"' + q + ' > \"' + os.path.join(self.customDir, "remaster/live/filesystem.manifest") + '\"' )
+                os.popen('cp -f \"' + os.path.join(self.customDir, "remaster/live/filesystem.manifest") + '\" \"' + os.path.join(self.customDir, "remaster/live/filesystem.manifest-desktop") + '\"')
                 # check for existing squashfs root
-                if os.path.exists(os.path.join(self.customDir, "remaster/casper/filesystem.squashfs")):
+                if os.path.exists(os.path.join(self.customDir, "remaster/live/filesystem.squashfs")):
                     print _("Removing existing SquashFS root...")
-                    os.popen('rm -Rf \"' + os.path.join(self.customDir, "remaster/casper/filesystem.squashfs") + '\"')
+                    os.popen('rm -Rf \"' + os.path.join(self.customDir, "remaster/live/filesystem.squashfs") + '\"')
                 print _("Building SquashFS root...")
                 # check for alternate mksquashfs
                 if mksquashfs == '':
-                    os.popen(self.timeCmd + ' mksquashfs \"' + os.path.join(self.customDir, "root/") + '\"' + ' \"' + os.path.join(self.customDir, "remaster/casper/filesystem.squashfs") + '\"')
+                    os.popen(self.timeCmd + ' mksquashfs \"' + os.path.join(self.customDir, "root/") + '\"' + ' \"' + os.path.join(self.customDir, "remaster/live/filesystem.squashfs") + '\"')
                 else:
-                    os.popen(self.timeCmd + ' ' + mksquashfs + ' \"' + os.path.join(self.customDir, "root/") + '\"' + ' \"' + os.path.join(self.customDir, "remaster/casper/filesystem.squashfs") + '\"')
+                    os.popen(self.timeCmd + ' ' + mksquashfs + ' \"' + os.path.join(self.customDir, "root/") + '\"' + ' \"' + os.path.join(self.customDir, "remaster/live/filesystem.squashfs") + '\"')
 
         # build iso
         if self.buildIso == True:
