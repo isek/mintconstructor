@@ -32,7 +32,7 @@ class Reconstructor:
         self.gladefile = '/usr/lib/linuxmint/mintConstructor/mintConstructor.glade'
         self.iconFile = '/usr/lib/linuxmint/mintConstructor/icon.svg'
 
-        self.appName = "Live CD Remastering Tool"
+        self.appName = "Live CD Remastering Tool (Debian)"
         self.codeName = " \"Chartres\" "
         self.devInProgress = False
         self.updateId = "321"
