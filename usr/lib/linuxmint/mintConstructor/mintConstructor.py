@@ -834,7 +834,8 @@ class Reconstructor:
 
             # extract initrd
             print _("Extracting Initial Ram Disk (initrd)...")
-            os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; cat ' + self.mountDir + '/casper/initrd.gz | gzip -d | cpio -i')
+            os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; lzma -dc -S .lz ' + self.mountDir + '/casper/initrd.lz | cpio -id')
+		
 
             # umount cdrom
             os.popen("umount " + self.mountDir)
@@ -871,7 +872,7 @@ class Reconstructor:
             # create initrd
             if os.path.exists(os.path.join(self.customDir, "initrd")):
                 print _("Creating Initrd...")
-                os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; find | cpio -H newc -o | gzip > ../initrd.gz' + '; mv -f ../initrd.gz \"' + os.path.join(self.customDir, "remaster/casper/initrd.gz") + '\"')
+                os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; find | cpio -H newc -o | lzma -7 > ../initrd.lz' + '; mv -f ../initrd.lz \"' + os.path.join(self.customDir, "remaster/casper/initrd.lz") + '\"')
 
         # build squash root
         if self.buildSquashRoot == True:
