@@ -133,9 +133,9 @@ class Reconstructor:
 		currentProject = os.environ['HOME']
 	self.wTree.get_widget("entryWorkingDir").set_text(currentProject)	
         # set default iso filenames
-        self.wTree.get_widget("entryLiveIsoFilename").set_text(os.path.join(currentProject, "LinuxMint-7-XXX-DEV-NNN.iso"))
+        self.wTree.get_widget("entryLiveIsoFilename").set_text(os.path.join(currentProject, "LinuxMint-8-DEV-xxx.iso"))
         # set default descriptions
-        cdDesc = _('Linux Mint 7 Gloria XXX')
+        cdDesc = _('Linux Mint 8 Helena')
         self.wTree.get_widget("entryLiveCdDescription").set_text(cdDesc)
         # set default cd architectures
         self.wTree.get_widget("comboboxLiveCdArch").set_active(0)
