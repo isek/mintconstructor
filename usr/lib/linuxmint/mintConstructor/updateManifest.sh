@@ -3,10 +3,10 @@ then
 cat > /tmp/$$.control <<FOO
 /casper/d
 /libdebian-installer4/d
-/os-prober/d
 /ubiquity/d
 /ubuntu-live/d
 /user-setup/d
+/gparted/d
 FOO
 sed -f /tmp/$$.control < $1/remaster/casper/filesystem.manifest > $1/remaster/casper/filesystem.manifest-desktop
 rm /tmp/$$.control
