@@ -873,8 +873,8 @@ class Reconstructor:
             # create initrd
             if os.path.exists(os.path.join(self.customDir, "initrd")):
                 print _("Creating Initrd...")
-                os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; find | cpio -H newc -o | gzip > ../initrd.gz' + '; mv -f ../initrd.gz \"' + os.path.join(self.customDir, "remaster/casper/initrd.gz") + '\"')
-                #os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; find | cpio -H newc -o | lzma -7 > ../initrd.lz' + '; mv -f ../initrd.lz \"' + os.path.join(self.customDir, "remaster/casper/initrd.lz") + '\"')
+                #os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; find | cpio -H newc -o | gzip > ../initrd.gz' + '; mv -f ../initrd.gz \"' + os.path.join(self.customDir, "remaster/casper/initrd.gz") + '\"')
+                os.popen('cd \"' + os.path.join(self.customDir, "initrd/") + '\"; find | cpio -H newc -o | lzma -7 > ../initrd.lz' + '; mv -f ../initrd.lz \"' + os.path.join(self.customDir, "remaster/casper/initrd.lz") + '\"')
 
         # build squash root
         if self.buildSquashRoot == True:
