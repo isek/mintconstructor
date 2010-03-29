@@ -1,3 +1,9 @@
+mintconstructor (2.2.7) isadora; urgency=low
+
+  * Using x-terminal-emulator instead of xterm
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  19 Nov 2009 14:00:00 +0000
+
 mintconstructor (2.2.6) helena; urgency=low
 
   * Go back to initrd.lz, needed by mint4win and problem on hardware wasn't related to it apparently.

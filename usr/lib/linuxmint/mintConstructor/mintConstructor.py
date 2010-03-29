@@ -407,10 +407,11 @@ class Reconstructor:
 	    #if commands.getoutput('which gnome-terminal') != '':
 	    #	print _('Launching Gnome-Terminal for advanced customization...')
 	    #	os.popen('export HOME=/root ; gnome-terminal --hide-menubar -t \"Reconstructor Terminal\" -e \"/tmp/reconstructor-terminal.sh\"')
-	    if commands.getoutput('which xterm') != '':
+	    if commands.getoutput('which x-terminal-emulator') != '':
 		print _('Launching Xterm for advanced customization...')
 	    	# use xterm if gnome-terminal isn't available
-	    	os.popen('export HOME=/root ; xterm -bg black -fg white -rightbar -title \"Reconstructor Terminal\" -e /tmp/reconstructor-terminal.sh')
+	    	#os.popen('export HOME=/root ; xterm -bg black -fg white -rightbar -title \"Reconstructor Terminal\" -e /tmp/reconstructor-terminal.sh')
+		os.popen('export HOME=/root ; x-terminal-emulator -e /tmp/reconstructor-terminal.sh')
  	    else:
 	    	print _('Error: no valid terminal found')
 	    	gtk.main_quit()
