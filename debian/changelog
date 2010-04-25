@@ -1,3 +1,9 @@
+mintconstructor (2.2.8) isadora; urgency=low
+
+  * Isadora default values
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun,  25 Apr 2010 19:50:00 +0000
+
 mintconstructor (2.2.7) isadora; urgency=low
 
   * Using x-terminal-emulator instead of xterm
