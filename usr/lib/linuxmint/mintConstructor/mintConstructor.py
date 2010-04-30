@@ -916,6 +916,9 @@ class Reconstructor:
 		#Remove boot.cat from md5sum.txt
 		os.system("sed -e '/boot.cat/d' " + os.path.join(self.customDir, "remaster/") + "md5sum.txt > " + os.path.join(self.customDir, "remaster/") + "md5sum.new")
 		os.system("mv " + os.path.join(self.customDir, "remaster/") + "md5sum.new " + os.path.join(self.customDir, "remaster/") + "md5sum.txt")
+		#Remove isolinux.bin from md5sum.txt
+		os.system("sed -e '/isolinux.bin/d' " + os.path.join(self.customDir, "remaster/") + "md5sum.txt > " + os.path.join(self.customDir, "remaster/") + "md5sum.new")
+		os.system("mv " + os.path.join(self.customDir, "remaster/") + "md5sum.new " + os.path.join(self.customDir, "remaster/") + "md5sum.txt")
                 # remove existing iso
                 if os.path.exists(self.buildLiveCdFilename):
                     print _("Removing existing ISO...")
