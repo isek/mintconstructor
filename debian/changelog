@@ -1,3 +1,10 @@
+mintconstructor (2.3.0) isadora; urgency=low
+
+  * Switched icon to png
+  * Defaults to xterm, switches to x-terminal-emulator if xterm isn't available
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat,  08 May 2010 09:16:00 +0000
+
 mintconstructor (2.2.9) isadora; urgency=low
 
   * Remove isolinux.bin from md5 checks

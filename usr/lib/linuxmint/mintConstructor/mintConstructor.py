@@ -30,7 +30,7 @@ class Reconstructor:
     def __init__(self):
         # vars
         self.gladefile = '/usr/lib/linuxmint/mintConstructor/mintConstructor.glade'
-        self.iconFile = '/usr/lib/linuxmint/mintConstructor/icon.svg'
+        self.iconFile = '/usr/lib/linuxmint/mintConstructor/icon.png'
 
         self.appName = "Live CD Remastering Tool (Ubuntu/Mint)"
         self.codeName = " \"Chartres\" "
@@ -409,9 +409,11 @@ class Reconstructor:
 	    #	os.popen('export HOME=/root ; gnome-terminal --hide-menubar -t \"Reconstructor Terminal\" -e \"/tmp/reconstructor-terminal.sh\"')
 	    if commands.getoutput('which x-terminal-emulator') != '':
 		print _('Launching Xterm for advanced customization...')
-	    	# use xterm if gnome-terminal isn't available
-	    	#os.popen('export HOME=/root ; xterm -bg black -fg white -rightbar -title \"Reconstructor Terminal\" -e /tmp/reconstructor-terminal.sh')
-		os.popen('export HOME=/root ; x-terminal-emulator -e /tmp/reconstructor-terminal.sh')
+	    	# use x-terminal-emulator if xterm isn't available
+		if os.path.exists("/usr/bin/xterm"):
+		    	os.popen('export HOME=/root ; xterm -bg black -fg white -rightbar -title \"Reconstructor Terminal\" -e /tmp/reconstructor-terminal.sh')
+		else:
+			os.popen('export HOME=/root ; x-terminal-emulator -e /tmp/reconstructor-terminal.sh')
  	    else:
 	    	print _('Error: no valid terminal found')
 	    	gtk.main_quit()
@@ -975,7 +977,7 @@ if __name__ == "__main__":
     if os.getuid() != 0 :
         ## show non-root privledge error
         warnDlg = gtk.Dialog(title="mintConstructor", parent=None, flags=0, buttons=(gtk.STOCK_OK, gtk.RESPONSE_OK))
-        warnDlg.set_icon_from_file('/usr/lib/linuxmint/mintConstructor/icon.svg')
+        warnDlg.set_icon_from_file('/usr/lib/linuxmint/mintConstructor/icon.png')
         warnDlg.vbox.set_spacing(10)
         labelSpc = gtk.Label(" ")
         warnDlg.vbox.pack_start(labelSpc)
