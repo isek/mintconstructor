@@ -1,3 +1,9 @@
+mintconstructor (2.3.2) julia; urgency=low
+
+  * Changed label to Julia
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue,  29 Jun 2010 17:29:00 +0000
+
 mintconstructor (2.3.1) isadora; urgency=low
 
   * Shows output of mksquashfs

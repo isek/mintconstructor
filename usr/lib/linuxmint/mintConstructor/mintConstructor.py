@@ -135,7 +135,7 @@ class Reconstructor:
         # set default iso filenames
         self.wTree.get_widget("entryLiveIsoFilename").set_text(os.path.join(currentProject, "LinuxMint-9-DEV-xxx.iso"))
         # set default descriptions
-        cdDesc = _('Linux Mint 9 Isadora')
+        cdDesc = _('Linux Mint 10 Julia')
         self.wTree.get_widget("entryLiveCdDescription").set_text(cdDesc)
         # set default cd architectures
         self.wTree.get_widget("comboboxLiveCdArch").set_active(0)
@@ -487,19 +487,19 @@ class Reconstructor:
             remaster = commands.getoutput('du -s ' + os.path.join(self.customDir, "remaster/"))
             mRemaster = r.match(remaster)
             remasterSize = int(mRemaster.group(1))
-
+	    print "remasterSize: %d" % remasterSize
             # subtract squashfs root
             if os.path.exists(os.path.join(self.customDir, "remaster/casper/filesystem.squashfs")):
                 squash = commands.getoutput('du -s ' + os.path.join(self.customDir, "remaster/casper/filesystem.squashfs"))
                 mSquash = r.match(squash)
                 squashSize = int(mSquash.group(1))
-	    print "OK"
+	    	print "squashSize: %d" % squashSize
             remasterSize -= squashSize
             # get size of root dir
             root = commands.getoutput('du -s ' + os.path.join(self.customDir, "root/"))
             mRoot = r.match(root)
-            rootSize = int(mRoot.group(1))
-
+            rootSize = int(mRoot.group(1))		
+	    print "rootSize: %d" % rootSize
             # divide root size to simulate squash compression
             self.wTree.get_widget("labelSoftwareIsoSize").set_text( '~ ' + str(int(round((remasterSize + (rootSize/3.185))/1024))) + ' MB')
             self.setDefaultCursor()
